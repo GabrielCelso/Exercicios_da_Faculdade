@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Funções</title>
+
+    <script>
+            
+        function calcular(operacao){
+        const n1 = document.getElementById('n1').value
+        const n2 = document.getElementById('n2').value
+       
+        let resultado
+        switch(operacao){
+            case '+': resultado = Somar(n1, n2); break;
+            case '-': resultado = Subtrair(n1, n2); break;
+            case '*': resultado = Multiplicar(n1, n2); break;
+            case '/': resultado = Dividir(n1, n2); break;
+        }
+
+        document.getElementById('resultado').innerHTML = "O resultado é " + resultado
+    } 
+
+    function Somar(n1, n2){
+        return Number(n1) + Number(n2)
+    }
+    
+    function Subtrair(n1, n2){
+        return Number(n1) - Number(n2)
+    }
+    
+    function Multiplicar(n1, n2){
+        return Number(n1) * Number(n2)
+    }
+    
+    function Dividir(n1, n2){
+        if(n2 == 0){
+            console.log("não é possível calcular com 0")
+            return null
+        } else {
+            return Number(n1) / Number(n2)
+        }
+    }
+    
+</script>
+    
+</head>
+<body>
+    
+    <form action="">
+
+       
+        N1: <input type="number" id="n1" />
+        N2: <input type="number" id="n2" /> <br>
+
+        <input type="button" value="Somar" onclick="calcular('+')"> <br>
+        <input type="button" value="Subtrair" onclick="calcular('-')"> <br>
+        <input type="button" value="Multiplicar" onclick="calcular('*')"> <br>
+        <input type="button" value="Dividir" onclick="calcular('/')"> <br>
+
+        <h1 id="resultado">O resultado da operação é </h1>
+    </form>
+</body>
+</html>
