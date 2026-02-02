@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForIn no HTML</title>
+<script>
+
+    const nome = prompt("Qual é o seu nome?")
+    console.log ("Seja bem-vindo " + nome + "!")
+    
+    const idade = prompt("Quantos anos você tem?")
+    
+    if(idade >= 18){
+        console.log("Você é maior de idade")
+    }
+    else{
+        console.log("Você é menor de idade")
+    }
+
+    const número = prompt("Qual é o seu número?")
+    const endereço = prompt("Qual é o seu endereço?")
+
+    console.log("Olá " + nome + ". Tudo bem com você?" + " Segundo os dados fornecidos, você possui: " + idade + ". Seu número de telefone é: " + número + ",e seu endereço é: " + endereço)
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
